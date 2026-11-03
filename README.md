@@ -4,7 +4,7 @@ Wedding invitation for Naman & Nitika.
 
 Open `index.html` in a browser (internet needed for the song and fonts).
 
-- Reception: Wednesday, 2 December 2026, 12:00 noon — Arya Nagar, Jhajjar, behind Kajaria Showroom, Tehsil Road
+- Reception: Wednesday, 2 December 2026, 12:00 noon — Kajaria Tiles Exclusive Showroom, Rajasthan Tiles & Bath World, Old Tehsil Road, Jhajjar, Haryana 124103
 - Baraat: Thursday, 3 December 2026, departure 6:00 PM, arrival 8:00 PM — Naveen Garden, near Gohana Bypass, Sonipat
 - Song: Hindi romantic Bollywood-style track in `assets/song.mp3` (Pixabay, “Midnight Fair” by djovan — vocals, flute, dhol). It tries to start as soon as the link opens. Tap Music to pause. Film songs such as Kesariya cannot be copied into the file; replace `assets/song.mp3` with your own file if you have one.
 
