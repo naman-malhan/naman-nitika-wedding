@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#14080c" />
+  <title>Naman &amp; Nitika — शुभ विवाह</title>
+  <meta name="description"
+    content="Naman & Nitika. Reception 2 December, 12 noon, Arya Nagar, Jhajjar. Baraat 3 December, 6 PM, arrival 8 PM, Naveen Garden, Sonipat." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Outfit:wght@300;400;500&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --wine: #14080c;
+      --rose: #8d3d4c;
+      --ivory: #fbf6ee;
+      --paper: #fffaf4;
+      --ink: #2a181c;
+      --muted: #6e564e;
+      --gold: #d7b56a;
+      --gold-deep: #a78445;
+      --line: rgba(167, 132, 69, 0.45);
+      --display: "Cormorant Garamond", Georgia, serif;
+      --hindi: "Tiro Devanagari Hindi", serif;
+      --sans: "Outfit", system-ui, sans-serif;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100dvh;
+      color: var(--ivory);
+      font-family: var(--sans);
+      font-weight: 300;
+      background: var(--wine);
+      overflow-x: hidden;
+    }
+
+    body.is-cover {
+      overflow: hidden;
+      height: 100dvh;
+    }
+
+    #dust,
+    #sky {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    #dust {
+      z-index: 0;
+    }
+
+    #sky {
+      z-index: 1;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background-image: url("assets/bloom.svg");
+      background-size: 280px 280px;
+      opacity: 0.9;
+    }
+
+    .garden {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .garden span {
+      position: absolute;
+      top: -12vh;
+      width: 28px;
+      height: 28px;
+      background: url("assets/marigold.svg") center / contain no-repeat;
+      animation: fall linear infinite;
+      filter: drop-shadow(0 8px 8px rgba(0, 0, 0, 0.28));
+    }
+
+    .garden span.jasmine {
+      width: 14px;
+      height: 14px;
+      background: radial-gradient(circle at 35% 35%, #fff, #f3e2c4 70%);
+      border-radius: 50%;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(115vh) rotate(240deg);
+      }
+    }
+
+    .garden span:nth-child(1) { left: 4%; animation-duration: 12s; animation-delay: -2s; }
+    .garden span:nth-child(2) { left: 14%; animation-duration: 15s; animation-delay: -8s; width: 18px; }
+    .garden span:nth-child(3) { left: 24%; animation-duration: 11s; animation-delay: -4s; }
+    .garden span:nth-child(4) { left: 36%; animation-duration: 16s; animation-delay: -11s; }
+    .garden span:nth-child(5) { left: 48%; animation-duration: 13s; animation-delay: -6s; width: 22px; }
+    .garden span:nth-child(6) { left: 58%; animation-duration: 14s; animation-delay: -1s; }
+    .garden span:nth-child(7) { left: 70%; animation-duration: 12s; animation-delay: -9s; }
+    .garden span:nth-child(8) { left: 82%; animation-duration: 17s; animation-delay: -5s; width: 20px; }
+    .garden span:nth-child(9) { left: 92%; animation-duration: 10s; animation-delay: -3s; }
+    .garden span:nth-child(10) { left: 8%; animation-duration: 18s; animation-delay: -13s; }
+    .garden span:nth-child(11) { left: 30%; animation-duration: 13s; animation-delay: -7s; }
+    .garden span:nth-child(12) { left: 64%; animation-duration: 15s; animation-delay: -12s; }
+    .garden span:nth-child(13) { left: 76%; animation-duration: 11s; animation-delay: -2.5s; }
+    .garden span:nth-child(14) { left: 44%; animation-duration: 16s; animation-delay: -9s; }
+
+    .deity {
+      display: grid;
+      justify-items: center;
+      margin: 0 auto 0.35rem;
+    }
+
+    .deity img {
+      width: 72px;
+      height: 88px;
+      object-fit: cover;
+      object-position: center 12%;
+      border-radius: 40px 40px 14px 14px;
+      border: 1.5px solid var(--gold);
+      box-shadow: 0 8px 18px rgba(80, 28, 36, 0.18);
+    }
+
+    .deity.large {
+      margin-bottom: 0.85rem;
+    }
+
+    .deity.large img {
+      width: min(68vw, 220px);
+      height: min(78vw, 270px);
+      border-width: 3px;
+      border-radius: 120px 120px 22px 22px;
+      box-shadow:
+        0 0 0 6px #fffaf4,
+        0 0 0 8px var(--gold),
+        0 18px 40px rgba(80, 28, 36, 0.22);
+    }
+
+    .deity figcaption {
+      margin-top: 0.55rem;
+      font-family: var(--hindi);
+      color: var(--rose);
+      font-size: 1.05rem;
+    }
+
+    .glow {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse 55% 42% at 50% 42%, rgba(176, 84, 98, 0.38), transparent 70%),
+        radial-gradient(ellipse 40% 30% at 50% 78%, rgba(215, 181, 106, 0.16), transparent 70%),
+        radial-gradient(circle at 50% 50%, transparent 40%, rgba(0, 0, 0, 0.45) 100%);
+    }
+
+    .jaali {
+      position: fixed;
+      left: 0;
+      top: 12vh;
+      width: 100%;
+      height: min(100vw, 760px);
+      border-radius: 50%;
+      z-index: 0;
+      pointer-events: none;
+      border: 1px solid rgba(215, 181, 106, 0.18);
+      box-shadow: inset 0 0 80px rgba(141, 61, 76, 0.2);
+    }
+
+    /* Cover */
+    .veil {
+      position: fixed;
+      inset: 0;
+      z-index: 3;
+      display: grid;
+      place-items: center;
+      padding: max(1rem, env(safe-area-inset-top)) 1rem max(1.2rem, env(safe-area-inset-bottom));
+      perspective: 1400px;
+    }
+
+    body.is-open .veil {
+      animation: veil-out 0.7s ease forwards;
+      pointer-events: none;
+    }
+
+    @keyframes veil-out {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    .enter {
+      width: min(92vw, 400px);
+      animation: arrive 1.15s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    @keyframes arrive {
+      from {
+        opacity: 0;
+        transform: translateY(48px) scale(0.94);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .tilt {
+      transition: transform 0.2s ease-out;
+    }
+
+    .card {
+      display: block;
+      position: relative;
+      width: 100%;
+      border: 0;
+      padding: 0;
+      background: #fffaf4;
+      color: inherit;
+      cursor: pointer;
+      text-align: center;
+      border-radius: 26px;
+      overflow: hidden;
+      box-shadow: 0 0 0 1px rgba(215, 181, 106, 0.7), 0 28px 70px rgba(0, 0, 0, 0.55);
+    }
+
+    .card:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 6px;
+      border-radius: 28px;
+    }
+
+    .slab {
+      position: relative;
+      border-radius: 26px;
+      padding: 1.35rem 1.15rem 1.2rem;
+      background: #fffaf4;
+      color: var(--ink);
+      box-shadow:
+        0 0 0 1px rgba(215, 181, 106, 0.65),
+        0 28px 70px rgba(0, 0, 0, 0.55);
+      overflow: hidden;
+    }
+
+    .slab::before {
+      content: "";
+      position: absolute;
+      inset: 9px;
+      border-radius: 18px;
+      border: 1px solid rgba(167, 132, 69, 0.55);
+      pointer-events: none;
+    }
+
+    .slab>* {
+      position: relative;
+      z-index: 1;
+    }
+
+    .thickness {
+      display: none;
+    }
+
+    .kicker {
+      margin: 0;
+      font-family: var(--hindi);
+      color: var(--rose);
+      font-size: 1.15rem;
+    }
+
+    .couple {
+      width: min(100%, 280px);
+      height: 128px;
+      display: block;
+      margin: 0.15rem auto 0;
+      overflow: visible;
+    }
+
+    .couple .groom,
+    .couple .bride {
+      transform-box: fill-box;
+      transform-origin: center bottom;
+      animation: sway 3.4s ease-in-out infinite;
+    }
+
+    .couple .bride {
+      animation-delay: -1.7s;
+    }
+
+    .couple .heart {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: beat 1.3s ease-in-out infinite;
+    }
+
+    .couple .dupatta {
+      transform-box: fill-box;
+      transform-origin: top center;
+      animation: veil 4s ease-in-out infinite;
+    }
+
+    @keyframes sway {
+
+      0%,
+      100% {
+        transform: rotate(-2.4deg);
+      }
+
+      50% {
+        transform: rotate(2.4deg);
+      }
+    }
+
+    @keyframes beat {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.18);
+      }
+    }
+
+    @keyframes veil {
+
+      0%,
+      100% {
+        transform: rotate(-3deg);
+      }
+
+      50% {
+        transform: rotate(4deg);
+      }
+    }
+
+    .float-hearts {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .float-hearts span {
+      position: absolute;
+      bottom: 12%;
+      color: #e7b0b6;
+      font-size: 16px;
+      opacity: 0;
+      animation: lift 8s linear infinite;
+    }
+
+    .float-hearts span:nth-child(1) {
+      left: 8%;
+      animation-delay: 0s;
+    }
+
+    .float-hearts span:nth-child(2) {
+      left: 18%;
+      animation-delay: 2s;
+      font-size: 11px;
+    }
+
+    .float-hearts span:nth-child(3) {
+      right: 16%;
+      animation-delay: 1s;
+    }
+
+    .float-hearts span:nth-child(4) {
+      right: 7%;
+      animation-delay: 3.4s;
+      font-size: 13px;
+    }
+
+    @keyframes lift {
+      0% {
+        transform: translateY(0) scale(0.8);
+        opacity: 0;
+      }
+
+      12% {
+        opacity: 0.85;
+      }
+
+      100% {
+        transform: translateY(-62vh) scale(1);
+        opacity: 0;
+      }
+    }
+
+    h1 {
+      margin: 0.15rem 0 0;
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: clamp(3.1rem, 14vw, 4.5rem);
+      line-height: 0.86;
+      letter-spacing: -0.03em;
+    }
+
+    h1 em {
+      display: block;
+      font-family: var(--display);
+      font-style: italic;
+      font-weight: 500;
+      font-size: 0.42em;
+      color: var(--gold-deep);
+      line-height: 1;
+      margin: 0.12em 0;
+    }
+
+    .dates {
+      margin: 0.85rem 0 0;
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .seal {
+      margin: 1.05rem auto 0.15rem;
+      width: 74px;
+      height: 74px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle at 32% 30%, #f3e6c4, #c6a15b 42%, #7a5a2e);
+      color: #fffaf3;
+      box-shadow: 0 10px 18px rgba(90, 40, 48, 0.25), inset 0 1px 2px rgba(255, 255, 255, 0.6);
+      font-family: var(--display);
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      position: relative;
+    }
+
+    .seal::after {
+      content: "";
+      position: absolute;
+      inset: 6px;
+      border-radius: 50%;
+      border: 1px dashed rgba(255, 250, 243, 0.65);
+    }
+
+    .hint {
+      margin: 0.55rem 0 0;
+      font-size: 0.68rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--rose);
+      font-weight: 500;
+    }
+
+    /* Story */
+    .story {
+      position: relative;
+      z-index: 2;
+      display: none;
+      width: min(calc(100% - 1.5rem), 520px);
+      margin: 0 auto;
+      padding: calc(3.6rem + env(safe-area-inset-top)) 0 6.5rem;
+    }
+
+    body.is-open .story {
+      display: block;
+      animation: story-in 0.8s ease both;
+    }
+
+    @keyframes story-in {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .sheet {
+      background: linear-gradient(180deg, var(--paper), #f7efe6);
+      color: var(--ink);
+      border-radius: 28px;
+      padding: 1.5rem 1.15rem 1.35rem;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(215, 181, 106, 0.35);
+    }
+
+    .sheet+.sheet {
+      margin-top: 0.85rem;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin: 0;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      font-size: 0.64rem;
+      color: var(--rose);
+      font-weight: 500;
+    }
+
+    .dev {
+      margin: 0.45rem 0 0;
+      font-family: var(--hindi);
+      font-size: 1.2rem;
+      color: #6d3040;
+    }
+
+    .names-sm {
+      margin: 0.35rem 0 0;
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: clamp(2.4rem, 10vw, 3.3rem);
+      line-height: 0.9;
+    }
+
+    .names-sm em {
+      display: block;
+      font-style: italic;
+      font-size: 0.42em;
+      color: var(--gold-deep);
+      margin: 0.08em 0;
+    }
+
+    .lead {
+      margin: 0.7rem auto 0;
+      max-width: 22rem;
+      font-family: var(--display);
+      font-style: italic;
+      font-size: 1.2rem;
+      line-height: 1.45;
+      color: var(--muted);
+    }
+
+    .elders {
+      display: grid;
+      gap: 0.7rem;
+    }
+
+    @media (min-width: 560px) {
+      .elders {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .elders article {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 0.9rem 0.75rem 1rem;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.45);
+    }
+
+    .elders small {
+      display: block;
+      font-family: var(--hindi);
+      color: var(--rose);
+      font-size: 0.95rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .elders strong {
+      display: block;
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 1.25rem;
+      line-height: 1.25;
+    }
+
+    .elders span {
+      display: block;
+      margin: 0.2rem 0;
+      color: var(--gold-deep);
+      font-family: var(--display);
+      font-style: italic;
+    }
+
+    .elders p {
+      margin: 0.35rem 0 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .kin {
+      margin: 0.85rem 0 0;
+      text-align: center;
+      font-family: var(--display);
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--muted);
+    }
+
+    .clock {
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.4rem;
+    }
+
+    .clock b {
+      display: block;
+      font-family: var(--display);
+      font-size: clamp(1.35rem, 5vw, 1.8rem);
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .clock div {
+      border-top: 1px solid var(--line);
+      padding-top: 0.35rem;
+    }
+
+    .clock i {
+      display: block;
+      font-style: normal;
+      font-size: 0.58rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .event h2 {
+      margin: 0.2rem 0 0;
+      font-family: var(--hindi);
+      font-weight: 400;
+      font-size: 1.7rem;
+    }
+
+    .when {
+      margin: 0.15rem 0 0;
+      font-family: var(--display);
+      font-size: 1.85rem;
+      font-weight: 600;
+      line-height: 1.05;
+    }
+
+    .when small {
+      display: block;
+      margin-top: 0.25rem;
+      font-family: var(--sans);
+      font-weight: 400;
+      font-size: 0.95rem;
+      color: var(--muted);
+      letter-spacing: 0;
+    }
+
+    .where {
+      margin: 0.7rem 0 0;
+      font-size: 0.98rem;
+      line-height: 1.45;
+      color: #3d2a2e;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 0.85rem;
+    }
+
+    .links a,
+    .call a,
+    button.send {
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 0.7rem 0.9rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+    }
+
+    .links a {
+      color: #6d3040;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .call {
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    .call a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--ivory);
+      background: linear-gradient(135deg, #7c3344, #4e1e2a);
+      min-height: 52px;
+    }
+
+    .call a b {
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    .call a span {
+      font-variant-numeric: tabular-nums;
+      font-size: 0.95rem;
+    }
+
+    form {
+      display: grid;
+      gap: 0.7rem;
+    }
+
+    label {
+      display: grid;
+      gap: 0.3rem;
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--rose);
+      font-weight: 500;
+    }
+
+    input,
+    textarea {
+      font: inherit;
+      font-size: 1rem;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--ink);
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 0.75rem 0.8rem;
+      width: 100%;
+    }
+
+    textarea {
+      min-height: 88px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #8d3d4c;
+      box-shadow: 0 0 0 3px rgba(141, 61, 76, 0.15);
+    }
+
+    .choices {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.45rem;
+    }
+
+    .choices input {
+      position: absolute;
+      opacity: 0;
+    }
+
+    .choices span {
+      display: block;
+      text-align: center;
+      padding: 0.75rem 0.4rem;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: #fff;
+      letter-spacing: 0;
+      text-transform: none;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .choices input:checked+span {
+      color: #6d3040;
+      border-color: #8d3d4c;
+      background: #fbeeee;
+      font-weight: 500;
+    }
+
+    button.send {
+      border: 0;
+      cursor: pointer;
+      color: #fffaf3;
+      background: linear-gradient(135deg, #8d3d4c, #5c2432);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      min-height: 48px;
+    }
+
+    .thanks {
+      display: none;
+      text-align: center;
+      padding: 0.6rem 0;
+    }
+
+    .thanks.show {
+      display: block;
+    }
+
+    form.hide {
+      display: none;
+    }
+
+    .thanks h3 {
+      margin: 0;
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: 2rem;
+      color: #6d3040;
+    }
+
+    .thanks p {
+      margin: 0.3rem 0 0;
+      font-family: var(--display);
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    .end {
+      text-align: center;
+      padding: 0.4rem 0.4rem 0;
+      font-family: var(--hindi);
+      font-size: 1.15rem;
+      color: #f0d7c8;
+    }
+
+    .end p {
+      margin: 0.25rem 0;
+    }
+
+    .end .en {
+      font-family: var(--display);
+      font-style: italic;
+      color: rgba(251, 246, 238, 0.75);
+    }
+
+    .music {
+      position: fixed;
+      z-index: 6;
+      right: max(0.8rem, env(safe-area-inset-right));
+      top: max(0.75rem, env(safe-area-inset-top));
+      border: 0;
+      cursor: pointer;
+      color: #2a181c;
+      background: linear-gradient(180deg, #f8e7c0, #d7b56a);
+      border-radius: 999px;
+      min-height: 48px;
+      padding: 0.55rem 0.9rem 0.55rem 0.7rem;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    .music:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 3px;
+    }
+
+    .music.on {
+      box-shadow: 0 0 0 6px rgba(215, 181, 106, 0.25), 0 10px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    .dock {
+      position: fixed;
+      z-index: 5;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: min(100%, 520px);
+      padding: 0.7rem 0.7rem calc(4.6rem + env(safe-area-inset-bottom));
+      background: rgba(20, 8, 12, 0.92);
+      border-top: 1px solid rgba(215, 181, 106, 0.35);
+      backdrop-filter: blur(10px);
+    }
+
+    .dock[hidden] {
+      display: none;
+    }
+
+    .dock p {
+      margin: 0 0 0.45rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .dock iframe {
+      width: 100%;
+      height: 152px;
+      border: 0;
+      border-radius: 12px;
+      background: #000;
+    }
+
+    @media (max-height: 740px) {
+      .rings {
+        margin-top: 0.4rem;
+      }
+
+      h1 {
+        font-size: clamp(2.7rem, 12vw, 3.6rem);
+      }
+
+      .seal {
+        width: 64px;
+        height: 64px;
+        margin-top: 0.7rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="is-cover">
+  <canvas id="dust" aria-hidden="true"></canvas>
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <div class="glow" aria-hidden="true"></div>
+  <div class="jaali" aria-hidden="true"></div>
+  <div class="garden" aria-hidden="true">
+    <span></span><span class="jasmine"></span><span></span><span class="jasmine"></span>
+    <span></span><span></span><span class="jasmine"></span><span></span>
+    <span></span><span class="jasmine"></span><span></span><span></span>
+    <span class="jasmine"></span><span></span>
+  </div>
+
+  <div class="veil" id="veil">
+    <div class="float-hearts" aria-hidden="true"><span>♥</span><span>♥</span><span>♥</span><span>♥</span></div>
+    <div class="enter">
+      <div class="tilt" id="tilt">
+        <button class="card" id="open" type="button" aria-label="Open the wedding invitation of Naman and Nitika">
+          <span class="thickness" aria-hidden="true"></span>
+          <span class="slab">
+            <p class="kicker">शुभ विवाह</p>
+            <figure class="deity">
+              <img src="assets/ganesha.jpg" alt="" />
+            </figure>
+            <svg class="couple" viewBox="0 0 300 140" aria-hidden="true">
+              <path d="M36 118C78 28 222 28 264 118" fill="none" stroke="#c6a15b" stroke-width="1.4" />
+              <path d="M58 118C96 48 204 48 242 118" fill="none" stroke="#e7c6c1" stroke-width="1" />
+              <g>
+                <circle cx="150" cy="36" r="5" fill="#8d3d4c" />
+                <circle cx="141" cy="42" r="3.4" fill="#d7b56a" />
+                <circle cx="159" cy="42" r="3.4" fill="#e7c6c1" />
+              </g>
+              <g class="groom">
+                <circle cx="112" cy="58" r="11" fill="#4e2430" />
+                <path d="M96 74c8-8 24-8 32 0l8 52H88z" fill="#6b2432" />
+                <path d="M104 86h16M108 96h8M108 106h8" stroke="#d7b56a" stroke-width="1.4" stroke-linecap="round" />
+                <path d="M128 88c10 6 16 10 22 14" fill="none" stroke="#4e2430" stroke-width="3"
+                  stroke-linecap="round" />
+              </g>
+              <g class="bride">
+                <circle cx="188" cy="56" r="11" fill="#4e2430" />
+                <path class="dupatta" d="M176 52c18-22 48-8 36 28" fill="none" stroke="#d7b56a" stroke-width="3"
+                  stroke-linecap="round" />
+                <path d="M168 72c10-10 30-10 40 0l16 54H152z" fill="#8d3d4c" />
+                <path d="M160 118h72" stroke="#d7b56a" stroke-width="2" stroke-linecap="round" />
+                <path d="M168 90c-8 4-16 8-22 12" fill="none" stroke="#4e2430" stroke-width="3"
+                  stroke-linecap="round" />
+              </g>
+              <path class="heart" d="M150 96c-1-8-12-8-12 0 0 8 12 14 12 14s12-6 12-14c0-8-11-8-12 0z" fill="#8d3d4c" />
+            </svg>
+            <h1>Naman<em>&amp;</em>Nitika</h1>
+            <p class="dates">2 Dec · Reception<br />3 Dec · Baraat</p>
+            <span class="seal">N&amp;N</span>
+            <p class="hint">Tap to open</p>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main class="story" id="story">
+    <section class="sheet center">
+      <figure class="deity large">
+        <img src="assets/ganesha.jpg" alt="Lord Ganesha seated with Riddhi and Siddhi" />
+        <figcaption>श्री गणेशाय नमः</figcaption>
+      </figure>
+      <p class="eyebrow">Together with their families</p>
+      <p class="dev">दो दिल, एक घर</p>
+      <h2 class="names-sm">Naman<em>&amp;</em>Nitika</h2>
+      <p class="lead">You are invited to the days we turn two names into one home.</p>
+      <div class="clock" aria-live="polite">
+        <div><b id="d">00</b><i>Days</i></div>
+        <div><b id="h">00</b><i>Hours</i></div>
+        <div><b id="m">00</b><i>Min</i></div>
+        <div><b id="s">00</b><i>Sec</i></div>
+      </div>
+      <p class="kin">until the reception</p>
+    </section>
+
+    <section class="sheet">
+      <p class="dev center">आशीर्वाद</p>
+      <div class="elders" style="margin-top:0.8rem">
+        <article>
+          <small>वर पक्ष</small>
+          <strong>Late Vijender Singh</strong>
+          <span>&amp;</span>
+          <strong>Kavita</strong>
+          <p>स्वर्गीय श्री विजेंदर सिंह एवं श्रीमती कविता</p>
+        </article>
+        <article>
+          <small>वधू पक्ष</small>
+          <strong>Raja Deshwal</strong>
+          <span>&amp;</span>
+          <strong>Meenakshi</strong>
+          <p>श्री राजा देशवाल एवं श्रीमती मीनाक्षी</p>
+        </article>
+      </div>
+      <p class="kin">With love from Mohit Malhan &amp; little Aariv Malhan</p>
+    </section>
+
+    <section class="sheet event">
+      <p class="eyebrow">First, we receive you</p>
+      <h2>रिसेप्शन</h2>
+      <p class="when">2 December 2026<small>दोपहर 12:00 बजे · Wednesday</small></p>
+      <p class="where">Arya Nagar, Jhajjar<br />Behind Kajaria Showroom, Tehsil Road, Jhajjar</p>
+      <div class="links">
+        <a id="map-home"
+          href="https://www.google.com/maps/search/?api=1&amp;query=Arya%20Nagar%20behind%20Kajaria%20showroom%20Tehsil%20Road%20Jhajjar"
+          target="_blank" rel="noopener noreferrer">Map</a>
+        <a id="cal-home" href="#">Add to calendar</a>
+      </div>
+    </section>
+
+    <section class="sheet event">
+      <p class="eyebrow">Then the baraat</p>
+      <h2>बारात</h2>
+      <p class="when">3 December 2026<small>प्रस्थान 6:00 PM · आगमन 8:00 PM</small></p>
+      <p class="where">Naveen Garden<br />Near Gohana Bypass, Sonipat, Haryana</p>
+      <div class="links">
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Naveen%20Garden%20near%20Gohana%20Bypass%20Sonipat%20Haryana"
+          target="_blank" rel="noopener noreferrer">Map</a>
+        <a id="cal-barat" href="#">Add to calendar</a>
+      </div>
+    </section>
+
+    <section class="sheet">
+      <p class="eyebrow">Call us</p>
+      <div class="call" style="margin-top:0.75rem">
+        <a href="tel:+917206611897"><b>Naman</b><span>72066 11897</span></a>
+        <a href="tel:+918930097828"><b>Mohit Malhan</b><span>89300 97828</span></a>
+        <a href="tel:+918588872738"><b>Virender Malhan</b><span>85888 72738</span></a>
+        <a href="tel:+919050555547"><b>Siddharth Malhan</b><span>90505 55547</span></a>
+      </div>
+    </section>
+
+    <footer class="end">
+      <p>जब तक चाँद रहे, हम रहें।</p>
+      <p class="en">Naman &amp; Nitika</p>
+    </footer>
+  </main>
+
+  <button class="music" id="music" type="button" aria-pressed="false" aria-label="Play music">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M9 18V6l10-2v12" />
+      <circle cx="7" cy="18" r="3" fill="none" stroke="currentColor" stroke-width="2" />
+      <circle cx="17" cy="16" r="3" fill="none" stroke="currentColor" stroke-width="2" />
+    </svg>
+    Music
+  </button>
+  <audio id="song" src="assets/song.mp3" loop preload="auto"></audio>
+
+  <script>
+    (function () {
+      const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const body = document.body;
+      const tilt = document.getElementById("tilt");
+      const openBtn = document.getElementById("open");
+      const story = document.getElementById("story");
+
+      const canvas = document.getElementById("dust");
+      const ctx = canvas.getContext("2d");
+      let parts = [];
+      function sizeCanvas() {
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = innerWidth * dpr;
+        canvas.height = innerHeight * dpr;
+      }
+      function makeParts() {
+        parts = Array.from({ length: 42 }, () => ({
+          x: Math.random(),
+          y: Math.random(),
+          r: 0.6 + Math.random() * 1.7,
+          v: 0.00012 + Math.random() * 0.00035,
+          a: 0.15 + Math.random() * 0.45,
+          gold: Math.random() > 0.4
+        }));
+      }
+      function paint(moving) {
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        parts.forEach((p) => {
+          if (moving) {
+            p.y -= p.v;
+            if (p.y < 0) p.y = 1;
+          }
+          ctx.beginPath();
+          ctx.fillStyle = p.gold ? "rgba(232,206,150," + p.a + ")" : "rgba(214,150,160," + p.a + ")";
+          ctx.arc(p.x * canvas.width, p.y * canvas.height, p.r * dpr, 0, Math.PI * 2);
+          ctx.fill();
+        });
+      }
+      sizeCanvas();
+      makeParts();
+      paint(!reduce);
+      if (!reduce) {
+        (function loop() { paint(true); requestAnimationFrame(loop); })();
+      }
+      addEventListener("resize", () => { sizeCanvas(); paint(!reduce); });
+
+      if (!reduce) {
+        const aim = (x, y, rect) => {
+          const dx = (x - rect.left) / rect.width - 0.5;
+          const dy = (y - rect.top) / rect.height - 0.5;
+          tilt.style.transform = "rotateX(" + (-dy * 8).toFixed(2) + "deg) rotateY(" + (dx * 10).toFixed(2) + "deg)";
+        };
+        openBtn.addEventListener("pointermove", (e) => {
+          if (e.pointerType === "touch") return;
+          aim(e.clientX, e.clientY, openBtn.getBoundingClientRect());
+        });
+        openBtn.addEventListener("pointerleave", () => {
+          tilt.style.transform = "";
+        });
+        openBtn.addEventListener("touchmove", (e) => {
+          const t = e.touches[0];
+          aim(t.clientX, t.clientY, openBtn.getBoundingClientRect());
+        }, { passive: true });
+      }
+
+      const music = document.getElementById("music");
+      const song = document.getElementById("song");
+      song.volume = 0.72;
+
+      function markPlaying(on) {
+        music.classList.toggle("on", on);
+        music.setAttribute("aria-pressed", on ? "true" : "false");
+        music.setAttribute("aria-label", on ? "Pause music" : "Play music");
+      }
+
+      function startSong() {
+        const pending = song.play();
+        if (!pending) {
+          markPlaying(true);
+          return;
+        }
+        pending.then(() => markPlaying(true)).catch(() => markPlaying(false));
+      }
+
+      const sky = document.getElementById("sky");
+      const skyCtx = sky.getContext("2d");
+      let sparks = [];
+
+      function sizeSky() {
+        sky.width = window.innerWidth;
+        sky.height = window.innerHeight;
+      }
+      sizeSky();
+      window.addEventListener("resize", sizeSky);
+
+      function burst(x, y) {
+        const colors = ["#ffe7a3", "#fffaf4", "#ffb25a", "#f3c1c6", "#fff"];
+        for (let i = 0; i < 54; i += 1) {
+          const angle = (Math.PI * 2 * i) / 54 + Math.random() * 0.25;
+          const speed = 1.1 + Math.random() * 3.4;
+          sparks.push({
+            x,
+            y,
+            vx: Math.cos(angle) * speed,
+            vy: Math.sin(angle) * speed,
+            life: 1,
+            color: colors[i % colors.length],
+            size: Math.random() < 0.2 ? 2.6 : 1.5
+          });
+        }
+      }
+
+      function launch() {
+        burst(
+          window.innerWidth * (0.12 + Math.random() * 0.76),
+          window.innerHeight * (0.08 + Math.random() * 0.38)
+        );
+      }
+
+      function paintSky() {
+        skyCtx.clearRect(0, 0, sky.width, sky.height);
+        sparks = sparks.filter((spark) => spark.life > 0);
+        sparks.forEach((spark) => {
+          spark.x += spark.vx;
+          spark.y += spark.vy;
+          spark.vy += 0.018;
+          spark.life -= 0.012;
+          skyCtx.globalAlpha = Math.max(spark.life, 0);
+          skyCtx.fillStyle = spark.color;
+          skyCtx.fillRect(spark.x, spark.y, spark.size, spark.size);
+        });
+        skyCtx.globalAlpha = 1;
+        requestAnimationFrame(paintSky);
+      }
+
+      if (!reduce) {
+        paintSky();
+        setTimeout(launch, 500);
+        setInterval(launch, 1700);
+      }
+
+      function openCard() {
+        if (body.classList.contains("is-open")) return;
+        body.classList.add("is-open");
+        body.classList.remove("is-cover");
+        story.hidden = false;
+        startSong();
+        if (!reduce) {
+          launch();
+          setTimeout(launch, 180);
+          setTimeout(launch, 420);
+        }
+        setTimeout(() => {
+          document.getElementById("veil").style.display = "none";
+        }, reduce ? 0 : 700);
+      }
+      openBtn.addEventListener("click", openCard);
+      startSong();
+      document.addEventListener("pointerdown", (event) => {
+        if (event.target.closest && event.target.closest("#music")) return;
+        if (song.paused) startSong();
+      }, { capture: true });
+
+      const target = new Date("2026-12-02T12:00:00+05:30").getTime();
+      function tick() {
+        const diff = Math.max(0, target - Date.now());
+        const pad = (n) => String(n).padStart(2, "0");
+        document.getElementById("d").textContent = pad(Math.floor(diff / 86400000));
+        document.getElementById("h").textContent = pad(Math.floor(diff / 3600000) % 24);
+        document.getElementById("m").textContent = pad(Math.floor(diff / 60000) % 60);
+        document.getElementById("s").textContent = pad(Math.floor(diff / 1000) % 60);
+      }
+      tick();
+      setInterval(tick, 1000);
+
+      function calLink(text, dates, location) {
+        const u = new URL("https://calendar.google.com/calendar/render");
+        u.searchParams.set("action", "TEMPLATE");
+        u.searchParams.set("text", text);
+        u.searchParams.set("dates", dates);
+        u.searchParams.set("location", location);
+        return u.toString();
+      }
+      document.getElementById("cal-home").href = calLink(
+        "Naman & Nitika — Reception",
+        "20261202T063000Z/20261202T103000Z",
+        "Arya Nagar, behind Kajaria Showroom, Tehsil Road, Jhajjar"
+      );
+      document.getElementById("cal-barat").href = calLink(
+        "Naman & Nitika — Baraat",
+        "20261203T123000Z/20261203T173000Z",
+        "Naveen Garden, near Gohana Bypass, Sonipat, Haryana"
+      );
+
+      music.addEventListener("click", (event) => {
+        event.stopPropagation();
+        if (song.paused) startSong();
+        else {
+          song.pause();
+          markPlaying(false);
+        }
+      });
+    })();
+  </script>
+</body>
+
+</html>
