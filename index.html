@@ -128,42 +128,63 @@
     .garden span:nth-child(13) { left: 76%; animation-duration: 11s; animation-delay: -2.5s; }
     .garden span:nth-child(14) { left: 44%; animation-duration: 16s; animation-delay: -9s; }
 
-    .deity {
-      display: grid;
-      justify-items: center;
-      margin: 0 auto 0.35rem;
+    .deities {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 0.55rem;
+      margin: 0.2rem auto 0.35rem;
     }
 
-    .deity img {
-      width: 72px;
-      height: 88px;
+    .deities img {
+      width: 62px;
+      height: 80px;
       object-fit: cover;
       object-position: center 12%;
-      border-radius: 40px 40px 14px 14px;
+      border-radius: 34px 34px 12px 12px;
       border: 1.5px solid var(--gold);
       box-shadow: 0 8px 18px rgba(80, 28, 36, 0.18);
+      display: block;
     }
 
-    .deity.large {
+    .deities.large {
+      gap: 0.7rem;
       margin-bottom: 0.85rem;
     }
 
-    .deity.large img {
-      width: min(68vw, 220px);
-      height: min(78vw, 270px);
-      border-width: 3px;
-      border-radius: 120px 120px 22px 22px;
-      box-shadow:
-        0 0 0 6px #fffaf4,
-        0 0 0 8px var(--gold),
-        0 18px 40px rgba(80, 28, 36, 0.22);
+    .deities.large figure {
+      margin: 0;
+      width: min(44%, 210px);
     }
 
-    .deity figcaption {
-      margin-top: 0.55rem;
+    .deities.large img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 4;
+      border-width: 2px;
+      border-radius: 72px 72px 16px 16px;
+      box-shadow:
+        0 0 0 4px #fffaf4,
+        0 0 0 6px var(--gold),
+        0 14px 28px rgba(80, 28, 36, 0.2);
+    }
+
+    .deities figcaption {
+      margin-top: 0.4rem;
       font-family: var(--hindi);
       color: var(--rose);
+      font-size: 0.92rem;
+      text-align: center;
+    }
+
+    .quote {
+      margin: 0.85rem auto 0;
+      max-width: 22rem;
+      text-align: center;
+      font-family: var(--hindi);
       font-size: 1.05rem;
+      line-height: 1.5;
+      color: #6d3040;
     }
 
     .glow {
@@ -649,6 +670,10 @@
       color: var(--muted);
     }
 
+    .event {
+      text-align: center;
+    }
+
     .event h2 {
       margin: 0.2rem 0 0;
       font-family: var(--hindi);
@@ -675,7 +700,8 @@
     }
 
     .where {
-      margin: 0.7rem 0 0;
+      margin: 0.7rem auto 0;
+      max-width: 24rem;
       font-size: 0.98rem;
       line-height: 1.45;
       color: #3d2a2e;
@@ -684,6 +710,7 @@
     .links {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 0.45rem;
       margin-top: 0.85rem;
     }
@@ -971,9 +998,10 @@
           <span class="thickness" aria-hidden="true"></span>
           <span class="slab">
             <p class="kicker">शुभ विवाह</p>
-            <figure class="deity">
-              <img src="assets/ganesha.jpg" alt="" />
-            </figure>
+            <div class="deities">
+              <img src="assets/shiva-hd.jpg" alt="" />
+              <img src="assets/ganesha-hd.jpg" alt="" />
+            </div>
             <svg class="couple" viewBox="0 0 300 140" aria-hidden="true">
               <path d="M36 118C78 28 222 28 264 118" fill="none" stroke="#c6a15b" stroke-width="1.4" />
               <path d="M58 118C96 48 204 48 242 118" fill="none" stroke="#e7c6c1" stroke-width="1" />
@@ -1012,10 +1040,16 @@
 
   <main class="story" id="story">
     <section class="sheet center">
-      <figure class="deity large">
-        <img src="assets/ganesha.jpg" alt="Lord Ganesha seated with Riddhi and Siddhi" />
-        <figcaption>श्री गणेशाय नमः</figcaption>
-      </figure>
+      <div class="deities large">
+        <figure>
+          <img src="assets/shiva-hd.jpg" alt="Lord Shiva seated in meditation" />
+          <figcaption>ॐ नमः शिवाय</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/ganesha-hd.jpg" alt="Lord Ganesha seated in blessing" />
+          <figcaption>श्री गणेशाय नमः</figcaption>
+        </figure>
+      </div>
       <p class="eyebrow">Together with their families</p>
       <p class="dev">दो दिल, एक घर</p>
       <h2 class="names-sm">Naman<em>&amp;</em>Nitika</h2>
@@ -1027,6 +1061,7 @@
         <div><b id="s">00</b><i>Sec</i></div>
       </div>
       <p class="kin">until the reception</p>
+      <p class="quote">ये साथ जन्मों-जन्मों तक रहे।</p>
     </section>
 
     <section class="sheet">
@@ -1048,6 +1083,7 @@
         </article>
       </div>
       <p class="kin">With love from Mohit Malhan &amp; little Aariv Malhan</p>
+      <p class="quote">आशीर्वाद से यह बंधन कभी न टूटे।</p>
     </section>
 
     <section class="sheet event">
@@ -1061,6 +1097,7 @@
           target="_blank" rel="noopener noreferrer">Map</a>
         <a id="cal-home" href="#">Add to calendar</a>
       </div>
+      <p class="quote">इस घर में खुशियाँ सदा ठहरी रहें।</p>
     </section>
 
     <section class="sheet event">
@@ -1073,9 +1110,10 @@
           target="_blank" rel="noopener noreferrer">Map</a>
         <a id="cal-barat" href="#">Add to calendar</a>
       </div>
+      <p class="quote">सात फेरे, एक वादा — अनंत काल तक।</p>
     </section>
 
-    <section class="sheet">
+    <section class="sheet center">
       <p class="eyebrow">Call us</p>
       <div class="call" style="margin-top:0.75rem">
         <a href="tel:+917206611897"><b>Naman</b><span>72066 11897</span></a>
@@ -1083,10 +1121,11 @@
         <a href="tel:+918588872738"><b>Virender Malhan</b><span>85888 72738</span></a>
         <a href="tel:+919050555547"><b>Siddharth Malhan</b><span>90505 55547</span></a>
       </div>
+      <p class="quote">दूर रहकर भी, दिल से साथ रहना।</p>
     </section>
 
     <footer class="end">
-      <p>जब तक चाँद रहे, हम रहें।</p>
+      <p>जब तक ये धरा रहे, नमन और नीतिका साथ रहें।</p>
       <p class="en">Naman &amp; Nitika</p>
     </footer>
   </main>
